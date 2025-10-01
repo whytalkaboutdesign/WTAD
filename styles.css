@@ -42,7 +42,6 @@ body {
 }
 
 .wtad-menu-top.panel-open {
-  /* Added small offset so top menu isn't flush with screen edge */
   transform: translateY(calc(-50vh + 0.5rem));
 }
 
@@ -53,7 +52,6 @@ body {
 }
 
 .wtad-menu-bottom.panel-open {
-  /* Adjusted bottom menu position to match top offset */
   transform: translateY(calc(50vh - 100% - 0.5rem));
 }
 
@@ -96,11 +94,14 @@ body {
 /* Panel Styles */
 .wtad-panel {
   position: absolute;
+  /* Panel now positioned to fill space between menus */
   top: 50%;
   transform: translateY(-50%);
   width: 90vw;
   max-width: 900px;
-  max-height: 80vh;
+  /* Height calculated to fit between top and bottom menus with offsets */
+  height: calc(100vh - 6rem);
+  max-height: calc(100vh - 6rem);
   background-color: #d4d4d4;
   border-radius: 8rem;
   opacity: 0;
@@ -200,19 +201,18 @@ body {
   }
 
   .wtad-menu-top.panel-open {
-    /* Small offset on mobile so buttons have breathing room from screen edge */
     transform: translateY(calc(-50vh + 0.5rem));
   }
 
   .wtad-menu-bottom.panel-open {
-    /* Matching offset for bottom menu on mobile */
     transform: translateY(calc(50vh - 100% - 0.5rem));
   }
 
   .wtad-panel {
     width: 95vw;
-    height: calc(100vh - 10rem); /* Reduced panel height to leave space for bottom menu */
-    max-height: none;
+    /* Mobile panel height adjusted to fill space between menus */
+    height: calc(100vh - 10rem);
+    max-height: calc(100vh - 10rem);
     border-radius: 2.07rem;
     z-index: 8;
   }
