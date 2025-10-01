@@ -129,7 +129,11 @@ body {
   height: 100%;
   object-fit: cover;
   filter: brightness(1.15);
-  border-radius: 1rem;
+  /* Applied panel roundness only to top corners */
+  border-top-left-radius: 8rem;
+  border-top-right-radius: 8rem;
+  border-bottom-left-radius: 0;
+  border-bottom-right-radius: 0;
 }
 
 /* Panel Content */
@@ -208,7 +212,7 @@ body {
 
   .wtad-panel-cover {
     height: 150px;
-    padding: 1.5rem;
+    padding: 0.7rem;
   }
 
   .wtad-panel-content {
@@ -216,6 +220,10 @@ body {
   }
 
   .wtad-panel-cover-image {
-    border-radius: 2.07rem;
+    /* Applied mobile panel roundness only to top corners */
+    border-top-left-radius: 2.07rem;
+    border-top-right-radius: 2.07rem;
+    border-bottom-left-radius: 0;
+    border-bottom-right-radius: 0;
   }
 }

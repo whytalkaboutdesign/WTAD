@@ -110,7 +110,7 @@ const panelData = {
   },
   about: {
     label: "Manifesto",
-    title: "Why talk about design",
+    title: "Establishment.",
     content: [
       "Eccoci al commento assolutamente non richiesto della terza edizione dei Design Talks: quella che, a nostro avviso, rivela inequivocabilmente l'esistenza di un establishment. Gli ospiti sono più o meno sempre gli stessi, più o meno mascherati.",
       "Gli attori principali: Studio Mistaker già organizzatore e promotore, nella persona di Martina Tariciotti, ospite e moderatrice, insieme a Stefano Cipolla, anche lui tra gli organizzatori, ultimamente impegnato con Grafica Magazine (che è media partner dell'evento).",
