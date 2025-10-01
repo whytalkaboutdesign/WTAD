@@ -128,6 +128,8 @@ const bottomMenu = document.getElementById("bottomMenu")
 const panelLabel = document.getElementById("panelLabel")
 const panelTitle = document.getElementById("panelTitle")
 const panelText = document.getElementById("panelText")
+const panelCoverVideo = document.getElementById("panelCoverVideo")
+const panelCoverImage = document.getElementById("panelCoverImage")
 
 // Functions
 function openPanel(type) {
@@ -151,6 +153,16 @@ function openPanel(type) {
     panelText.appendChild(p)
   })
 
+  if (type === "articles") {
+    panelCoverVideo.style.display = "block"
+    panelCoverImage.style.display = "none"
+    panelCoverVideo.play() // Ensure video plays
+  } else {
+    panelCoverVideo.style.display = "none"
+    panelCoverImage.style.display = "block"
+    panelCoverVideo.pause() // Pause video when not visible
+  }
+
   // Show panel and transform menus
   panel.classList.add("active")
   topMenu.classList.add("panel-open")
@@ -168,7 +180,7 @@ function closePanel() {
 }
 
 function openEmail() {
-  window.location.href = "mailto:info@placeholder.com?subject=Whytalkaboutdesign?"
+  window.location.href = "mailto:whytalkaboutdesign@proton.me?subject=Whytalkaboutdesign?"
 }
 
 // Log configuration on load

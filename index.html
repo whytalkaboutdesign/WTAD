@@ -8,12 +8,7 @@
 </head>
 <body>
     <div class="wtad-container">
-        <!-- Video Background -->
-        <video autoplay loop muted playsinline class="wtad-video-background">
-            <source src="background-video.mp4" type="video/mp4">
-        </video>
-
-        <!-- Top Menu -->
+         Top Menu 
         <nav class="wtad-menu wtad-menu-top" id="topMenu">
             <button class="wtad-menu-button wtad-fade-in" style="animation-delay: 0s" onclick="closePanel()">
                 WTAD
@@ -23,10 +18,28 @@
             </button>
         </nav>
 
-        <!-- Panel -->
+         Panel 
         <div class="wtad-panel" id="panel">
             <div class="wtad-panel-cover">
-                <img src="abstract-artistic-text-pattern-establishment-typog.jpg" alt="Cover" class="wtad-panel-cover-image" id="panelCoverImage">
+                 Added video element for Articles panel 
+                <video 
+                    src="Establishment.mp4" 
+                    class="wtad-panel-cover-image" 
+                    id="panelCoverVideo"
+                    autoplay 
+                    loop 
+                    muted 
+                    playsinline
+                    style="display: none;"
+                ></video>
+                 Image element for Manifesto panel 
+                <img 
+                    src="abstract-artistic-text-pattern-establishment-typog.jpg" 
+                    alt="Cover" 
+                    class="wtad-panel-cover-image" 
+                    id="panelCoverImage"
+                    style="display: none;"
+                >
             </div>
 
             <div class="wtad-panel-content">
@@ -41,7 +54,7 @@
             </div>
         </div>
 
-        <!-- Bottom Menu -->
+         Bottom Menu 
         <nav class="wtad-menu wtad-menu-bottom" id="bottomMenu">
             <button class="wtad-menu-button wtad-fade-in" style="animation-delay: 0.2s" onclick="openPanel('articles')">
                 Articles
