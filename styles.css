@@ -42,7 +42,8 @@ body {
 }
 
 .wtad-menu-top.panel-open {
-  transform: translateY(-50vh);
+  /* Added small offset so top menu isn't flush with screen edge */
+  transform: translateY(calc(-50vh + 0.5rem));
 }
 
 .wtad-menu-bottom {
@@ -52,7 +53,8 @@ body {
 }
 
 .wtad-menu-bottom.panel-open {
-  transform: translateY(calc(50vh - 100% - 1rem));
+  /* Adjusted bottom menu position to match top offset */
+  transform: translateY(calc(50vh - 100% - 0.5rem));
 }
 
 /* Menu Buttons */
@@ -198,11 +200,13 @@ body {
   }
 
   .wtad-menu-top.panel-open {
-    transform: translateY(-50vh);
+    /* Small offset on mobile so buttons have breathing room from screen edge */
+    transform: translateY(calc(-50vh + 0.5rem));
   }
 
   .wtad-menu-bottom.panel-open {
-    transform: translateY(calc(50vh - 100% - 0.25rem));
+    /* Matching offset for bottom menu on mobile */
+    transform: translateY(calc(50vh - 100% - 0.5rem));
   }
 
   .wtad-panel {
