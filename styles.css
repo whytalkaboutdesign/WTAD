@@ -208,7 +208,7 @@ body {
 
   .wtad-panel-cover {
     height: 150px;
-    padding: 0.7rem;
+    padding: 1.5rem;
   }
 
   .wtad-panel-content {
@@ -216,6 +216,6 @@ body {
   }
 
   .wtad-panel-cover-image {
-    border-radius: 1.5rem;
+    border-radius: 2.07rem;
   }
 }
