@@ -94,14 +94,16 @@ body {
 /* Panel Styles */
 .wtad-panel {
   position: absolute;
-  /* Panel now positioned to fill space between menus */
-  top: 50%;
-  transform: translateY(-50%);
+  /* Panel positioned to fill space between menus without gaps */
+  top: 0;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  margin-top: 5rem;
+  margin-bottom: 5rem;
   width: 90vw;
   max-width: 900px;
-  /* Height calculated to fit between top and bottom menus with offsets */
-  height: calc(100vh - 6rem);
-  max-height: calc(100vh - 6rem);
+  height: auto;
   background-color: #d4d4d4;
   border-radius: 8rem;
   opacity: 0;
@@ -115,7 +117,7 @@ body {
 
 .wtad-panel.active {
   opacity: 1;
-  transform: translateY(-50%) scale(1);
+  transform: translateX(-50%) scale(1);
   pointer-events: auto;
 }
 
@@ -209,10 +211,10 @@ body {
   }
 
   .wtad-panel {
-    width: 95vw;
-    /* Mobile panel height adjusted to fill space between menus */
-    height: calc(100vh - 10rem);
-    max-height: calc(100vh - 10rem);
+    /* Reduced width and adjusted margins for mobile to ensure bottom menu is visible */
+    width: 85vw;
+    margin-top: 6rem;
+    margin-bottom: 6rem;
     border-radius: 2.07rem;
     z-index: 8;
   }
