@@ -209,7 +209,7 @@ body {
     width: 95vw;
     height: calc(100vh - 10rem);
     max-height: none;
-    border-radius: 2.07rem;
+    border-radius: 4rem;
     z-index: 8;
   }
 
