@@ -46,18 +46,16 @@ body {
 }
 
 .wtad-menu-bottom {
-  position: absolute;
+  /* Using fixed position to ensure it stays in viewport */
+  position: fixed;
   top: 50%;
-  transform: translateY(0);
+  left: 50%;
+  transform: translate(-50%, 0);
 }
 
 .wtad-menu-bottom.panel-open {
-  /* Using fixed position to keep bottom menu always visible at bottom of viewport */
-  position: fixed;
-  bottom: 0.5rem;
-  left: 50%;
-  transform: translateX(-50%);
-  top: auto;
+  /* Animating transform to move down from center to bottom */
+  transform: translate(-50%, calc(50vh - 100% - 0.5rem));
 }
 
 /* Menu Buttons */
@@ -212,12 +210,8 @@ body {
   }
 
   .wtad-menu-bottom.panel-open {
-    /* Same fixed positioning for mobile */
-    position: fixed;
-    bottom: 0.5rem;
-    left: 50%;
-    transform: translateX(-50%);
-    top: auto;
+    /* Same animation for mobile - moves from center to bottom */
+    transform: translate(-50%, calc(50vh - 100% - 0.5rem));
   }
 
   .wtad-panel {
