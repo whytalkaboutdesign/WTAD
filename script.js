@@ -110,7 +110,7 @@ const panelData = {
   },
   about: {
     label: "Manifesto",
-    title:   "Why talk about desgin",
+    title: "Why talk about desgin",
     content: [
       "Eccoci al commento assolutamente non richiesto della terza edizione dei Design Talks: quella che, a nostro avviso, rivela inequivocabilmente l'esistenza di un establishment. Gli ospiti sono più o meno sempre gli stessi, più o meno mascherati.",
       "Gli attori principali: Studio Mistaker già organizzatore e promotore, nella persona di Martina Tariciotti, ospite e moderatrice, insieme a Stefano Cipolla, anche lui tra gli organizzatori, ultimamente impegnato con Grafica Magazine (che è media partner dell'evento).",
@@ -128,8 +128,8 @@ const bottomMenu = document.getElementById("bottomMenu")
 const panelLabel = document.getElementById("panelLabel")
 const panelTitle = document.getElementById("panelTitle")
 const panelText = document.getElementById("panelText")
-const panelCoverVideo = document.getElementById("panelCoverVideo")
-const panelCoverImage = document.getElementById("panelCoverImage")
+const panelCoverVideoArticles = document.getElementById("panelCoverVideoArticles")
+const panelCoverVideoManifesto = document.getElementById("panelCoverVideoManifesto")
 
 // Functions
 function openPanel(type) {
@@ -154,13 +154,15 @@ function openPanel(type) {
   })
 
   if (type === "articles") {
-    panelCoverVideo.style.display = "block"
-    panelCoverImage.style.display = "none"
-    panelCoverVideo.play() // Ensure video plays
+    panelCoverVideoArticles.style.display = "block"
+    panelCoverVideoManifesto.style.display = "none"
+    panelCoverVideoArticles.play()
+    panelCoverVideoManifesto.pause()
   } else {
-    panelCoverVideo.style.display = "none"
-    panelCoverImage.style.display = "block"
-    panelCoverVideo.pause() // Pause video when not visible
+    panelCoverVideoArticles.style.display = "none"
+    panelCoverVideoManifesto.style.display = "block"
+    panelCoverVideoManifesto.play()
+    panelCoverVideoArticles.pause()
   }
 
   // Show panel and transform menus
@@ -176,6 +178,8 @@ function closePanel() {
   panel.classList.remove("active")
   topMenu.classList.remove("panel-open")
   bottomMenu.classList.remove("panel-open")
+  panelCoverVideoArticles.pause()
+  panelCoverVideoManifesto.pause()
   console.log("[v0] Panel closed")
 }
 

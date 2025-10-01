@@ -8,7 +8,7 @@
 </head>
 <body>
     <div class="wtad-container">
-         <!-- Top Menu -->
+          Top Menu 
         <nav class="wtad-menu wtad-menu-top" id="topMenu">
             <button class="wtad-menu-button wtad-fade-in" style="animation-delay: 0s" onclick="closePanel()">
                 WTAD
@@ -18,28 +18,31 @@
             </button>
         </nav>
 
-         <!-- Panel -->
+          Panel 
         <div class="wtad-panel" id="panel">
             <div class="wtad-panel-cover">
-                 <!-- Updated video path to media folde--> 
+                  Articles video 
                 <video 
                     src="media/Establishment.mp4" 
                     class="wtad-panel-cover-image" 
-                    id="panelCoverVideo"
+                    id="panelCoverVideoArticles"
                     autoplay 
                     loop 
                     muted 
                     playsinline
                     style="display: none;"
                 ></video>
-                 <!--Updated image path to media folde-->
-                <img 
-                    src="media/abstract-artistic-text-pattern-establishment-typog.jpg" 
-                    alt="Cover" 
+                  Manifesto video replacing the image 
+                <video 
+                    src="media/Manifesto-2.mp4" 
                     class="wtad-panel-cover-image" 
-                    id="panelCoverImage"
+                    id="panelCoverVideoManifesto"
+                    autoplay 
+                    loop 
+                    muted 
+                    playsinline
                     style="display: none;"
-                >
+                ></video>
             </div>
 
             <div class="wtad-panel-content">
@@ -54,7 +57,7 @@
             </div>
         </div>
 
-         <!--Bottom Menu -->
+         Bottom Menu 
         <nav class="wtad-menu wtad-menu-bottom" id="bottomMenu">
             <button class="wtad-menu-button wtad-fade-in" style="animation-delay: 0.2s" onclick="openPanel('articles')">
                 Articles
