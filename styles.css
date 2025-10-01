@@ -42,7 +42,7 @@ body {
 }
 
 .wtad-menu-top.panel-open {
-  transform: translateY(calc(-50vh + 1rem));
+  transform: translateY(calc(-50vh + 1.5rem));
 }
 
 .wtad-menu-bottom {
@@ -52,7 +52,7 @@ body {
 }
 
 .wtad-menu-bottom.panel-open {
-  transform: translateY(calc(50vh - 100% - 1rem));
+  transform: translateY(calc(50vh - 100% - 1.5rem));
 }
 
 /* Menu Buttons */
@@ -198,16 +198,16 @@ body {
   }
 
   .wtad-menu-top.panel-open {
-    transform: translateY(calc(-50vh + 0.25rem));
+    transform: translateY(calc(-50vh + 1.5rem));
   }
 
   .wtad-menu-bottom.panel-open {
-    transform: translateY(calc(50vh - 100% - 0.25rem));
+    transform: translateY(calc(50vh - 100% - 1.5rem));
   }
 
   .wtad-panel {
     width: 95vw;
-    height: calc(100vh - 10rem); /* Reduced panel height to leave space for bottom menu */
+    height: calc(100vh - 10rem);
     max-height: none;
     border-radius: 2.07rem;
     z-index: 8;
