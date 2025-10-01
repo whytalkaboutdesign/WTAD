@@ -223,8 +223,8 @@ body {
   }
 
   .wtad-panel-cover-image {
-    border-top-left-radius: 1.37rem;
-    border-top-right-radius: 1.37rem;
+    border-top-left-radius: 4rem;
+    border-top-right-radius: 4rem;
     border-bottom-left-radius: 0;
     border-bottom-right-radius: 0;
   }
