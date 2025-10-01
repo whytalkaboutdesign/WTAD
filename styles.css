@@ -130,8 +130,8 @@ body {
   object-fit: cover;
   filter: brightness(1.15);
   /* Applied panel roundness only to top corners */
-  border-top-left-radius: 8rem;
-  border-top-right-radius: 8rem;
+  border-top-left-radius: inherit;
+  border-top-right-radius: inherit;
   border-bottom-left-radius: 0;
   border-bottom-right-radius: 0;
 }
