@@ -42,7 +42,7 @@ body {
 }
 
 .wtad-menu-top.panel-open {
-  transform: translateY(calc(-50vh + 1.5rem));
+  transform: translateY(calc(-50vh + 1rem));
 }
 
 .wtad-menu-bottom {
@@ -52,7 +52,7 @@ body {
 }
 
 .wtad-menu-bottom.panel-open {
-  transform: translateY(calc(50vh - 100% - 1.5rem));
+  transform: translateY(calc(50vh - 100% - 1rem));
 }
 
 /* Menu Buttons */
@@ -124,7 +124,7 @@ body {
   background-color: #d4d4d4;
   overflow: hidden;
   border: none;
-  padding: 2rem;
+  padding: 0.7rem;
 }
 
 .wtad-panel-cover-image {
@@ -198,18 +198,18 @@ body {
   }
 
   .wtad-menu-top.panel-open {
-    transform: translateY(calc(-50vh + 1.5rem));
+    transform: translateY(calc(-50vh + 0.25rem));
   }
 
   .wtad-menu-bottom.panel-open {
-    transform: translateY(calc(50vh - 100% - 1.5rem));
+    transform: translateY(calc(50vh - 100% - 0.25rem));
   }
 
   .wtad-panel {
     width: 95vw;
-    height: calc(100vh - 10rem);
+    height: calc(100vh - 10rem); /* Reduced panel height to leave space for bottom menu */
     max-height: none;
-    border-radius: 4rem;
+    border-radius: 2.07rem;
     z-index: 8;
   }
 
@@ -223,8 +223,8 @@ body {
   }
 
   .wtad-panel-cover-image {
-    border-top-left-radius: 4rem;
-    border-top-right-radius: 4rem;
+    border-top-left-radius: 1.37rem;
+    border-top-right-radius: 1.37rem;
     border-bottom-left-radius: 0;
     border-bottom-right-radius: 0;
   }
