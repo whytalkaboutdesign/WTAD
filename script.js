@@ -7,9 +7,9 @@ const CONFIG = {
       textSizeMax: "1.28rem",
     },
     mobile: {
-      textSizeMin: "1.122rem",
-      textSizeVw: "4.07vw",
-      textSizeMax: "1.738rem",
+      textSizeMin: "1.3rem",
+      textSizeVw: "4.1vw",
+      textSizeMax: "1.8rem",
     },
   },
   buttons: {
