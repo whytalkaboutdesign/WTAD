@@ -1,0 +1,232 @@
+/* Reset and Base Styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Cantarell", sans-serif;
+  overflow: hidden;
+}
+
+/* Container */
+.wtad-container {
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  overflow: hidden;
+}
+
+/* Video Background */
+.wtad-video-background {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  object-fit: cover;
+  z-index: 0;
+}
+
+/* Menu Styles */
+.wtad-menu {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0;
+  z-index: 10;
+  transition: transform 0.6s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.wtad-menu-top {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-100%);
+}
+
+.wtad-menu-top.panel-open {
+  transform: translateY(calc(-50vh + 1rem));
+}
+
+.wtad-menu-bottom {
+  position: absolute;
+  top: 50%;
+  transform: translateY(0);
+}
+
+.wtad-menu-bottom.panel-open {
+  transform: translateY(calc(50vh - 100% - 1rem));
+}
+
+/* Menu Buttons */
+.wtad-menu-button {
+  font-family: inherit;
+  font-weight: 900;
+  font-size: clamp(1.28rem, 1.28vw, 1.28rem);
+  letter-spacing: -0.05em;
+  background-color: #d4d4d4;
+  color: #ffffff;
+  border: none;
+  padding: clamp(0.19rem, 0.32vw, 0.32rem) clamp(0.54rem, 0.96vw, 0.77rem);
+  border-radius: 9999px;
+  cursor: pointer;
+  white-space: nowrap;
+}
+
+.wtad-menu-button:active {
+  transform: scale(0.98);
+}
+
+/* Fade In Animation */
+.wtad-fade-in {
+  opacity: 0;
+  animation: fadeIn 0.4s ease-in forwards;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Panel Styles */
+.wtad-panel {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 90vw;
+  max-width: 900px;
+  max-height: 80vh;
+  background-color: #d4d4d4;
+  border-radius: 8rem;
+  opacity: 0;
+  pointer-events: none;
+  transition: all 0.6s cubic-bezier(0.4, 0, 0.2, 1);
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  z-index: 5;
+}
+
+.wtad-panel.active {
+  opacity: 1;
+  transform: translateY(-50%) scale(1);
+  pointer-events: auto;
+}
+
+/* Panel Cover */
+.wtad-panel-cover {
+  width: 100%;
+  height: 230px;
+  flex-shrink: 0;
+  background-color: #d4d4d4;
+  overflow: hidden;
+  border: none;
+  padding: 0.7rem;
+}
+
+.wtad-panel-cover-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  filter: brightness(1.15);
+  border-radius: 1rem;
+}
+
+/* Panel Content */
+.wtad-panel-content {
+  flex: 1;
+  overflow-y: auto;
+  padding: 2rem 3rem;
+  background-color: #d4d4d4;
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+}
+
+.wtad-panel-content::-webkit-scrollbar {
+  display: none;
+}
+
+/* Panel Header */
+.wtad-panel-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 1.5rem;
+}
+
+.wtad-panel-label,
+.wtad-panel-date {
+  font-size: 0.875rem;
+  color: #a3a3a3;
+  font-weight: 900;
+}
+
+/* Panel Title */
+.wtad-panel-title {
+  font-size: clamp(1.5rem, 3vw, 2.5rem);
+  font-weight: 900;
+  color: #000000;
+  margin-bottom: 1.5rem;
+  letter-spacing: -0.02em;
+}
+
+/* Panel Text */
+.wtad-panel-text {
+  font-size: clamp(1rem, 2vw, 1.25rem);
+  font-weight: 400;
+  line-height: 1.6;
+  color: #000000;
+  font-family: "Times New Roman", Times, serif;
+}
+
+.wtad-panel-text p {
+  margin-bottom: 1.5rem;
+}
+
+/* Mobile Styles */
+@media (max-width: 768px) {
+  .wtad-menu-button {
+    font-size: clamp(1.122rem, 4.07vw, 1.738rem);
+    padding: clamp(0.165rem, 0.286vw, 0.286rem) clamp(0.473rem, 0.847vw, 0.682rem);
+  }
+
+  .wtad-menu-top.panel-open {
+    transform: translateY(calc(-50vh + 0.5rem));
+  }
+
+  .wtad-menu-bottom.panel-open {
+    transform: translateY(calc(50vh - 100% - 0.5rem));
+  }
+
+  .wtad-panel {
+    width: 95vw;
+    height: calc(100vh - 10rem - 1rem);
+    max-height: none;
+    border-radius: 2.07rem;
+    z-index: 8;
+  }
+
+  .wtad-panel-cover {
+    height: 150px;
+    padding: 0.7rem;
+  }
+
+  .wtad-panel-content {
+    padding: 1.5rem 1.5rem;
+  }
+
+  .wtad-panel-cover-image {
+    border-radius: 1.5rem;
+  }
+}

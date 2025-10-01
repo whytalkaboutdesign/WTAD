@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WTAD - Why Talk About Design</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="wtad-container">
+        <!-- Video Background -->
+        <video autoplay loop muted playsinline class="wtad-video-background">
+            <source src="background-video.mp4" type="video/mp4">
+        </video>
+
+        <!-- Top Menu -->
+        <nav class="wtad-menu wtad-menu-top" id="topMenu">
+            <button class="wtad-menu-button wtad-fade-in" style="animation-delay: 0s" onclick="closePanel()">
+                WTAD
+            </button>
+            <button class="wtad-menu-button wtad-fade-in" style="animation-delay: 0.1s" onclick="openEmail()">
+                Whytalkaboutdesign
+            </button>
+        </nav>
+
+        <!-- Panel -->
+        <div class="wtad-panel" id="panel">
+            <div class="wtad-panel-cover">
+                <img src="abstract-artistic-text-pattern-establishment-typog.jpg" alt="Cover" class="wtad-panel-cover-image" id="panelCoverImage">
+            </div>
+
+            <div class="wtad-panel-content">
+                <div class="wtad-panel-header">
+                    <span class="wtad-panel-label" id="panelLabel">Article 1</span>
+                    <span class="wtad-panel-date">30 set 2025</span>
+                </div>
+
+                <h1 class="wtad-panel-title" id="panelTitle">Establishment.</h1>
+
+                <div class="wtad-panel-text" id="panelText"></div>
+            </div>
+        </div>
+
+        <!-- Bottom Menu -->
+        <nav class="wtad-menu wtad-menu-bottom" id="bottomMenu">
+            <button class="wtad-menu-button wtad-fade-in" style="animation-delay: 0.2s" onclick="openPanel('articles')">
+                Articles
+            </button>
+            <button class="wtad-menu-button wtad-fade-in" style="animation-delay: 0.3s" onclick="openPanel('about')">
+                Manifesto
+            </button>
+        </nav>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
