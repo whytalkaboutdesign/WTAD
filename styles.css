@@ -34,7 +34,6 @@ body {
   gap: 0;
   z-index: 9999;
   transition: transform 0.6s cubic-bezier(0.42, 0, 1, 1);
-  /* Added pointer-events to ensure menus are clickable */
   pointer-events: auto;
 }
 
@@ -42,10 +41,10 @@ body {
   position: fixed;
   top: 50%;
   left: 50%;
-  transform: translate(-50%, -100%);
+  /* Made menus overlap by 2px when centered to eliminate white line gap */
+  transform: translate(-50%, calc(-100% + 2px));
 }
 
-/* Increased safe area fallback from 0.5rem to 1.5rem for better mobile visibility */
 .wtad-menu-top.panel-open {
   top: 50%;
   transform: translate(-50%, calc(-50vh + env(safe-area-inset-top, 1.5rem)));
@@ -58,7 +57,6 @@ body {
   transform: translate(-50%, 0);
 }
 
-/* Increased safe area fallback from 0.5rem to 1.5rem for better mobile visibility */
 .wtad-menu-bottom.panel-open {
   top: 50%;
   transform: translate(-50%, calc(50vh - 100% - env(safe-area-inset-bottom, 1.5rem)));
@@ -103,7 +101,6 @@ body {
 /* Panel Styles */
 .wtad-panel {
   position: absolute;
-  /* Updated panel positioning to match new menu safe area offsets */
   top: calc(env(safe-area-inset-top, 1.5rem) + 2.8rem);
   bottom: calc(env(safe-area-inset-bottom, 1.5rem) + 2.8rem);
   left: 50%;
@@ -208,10 +205,19 @@ body {
     padding: clamp(0.165rem, 0.286vw, 0.286rem) clamp(0.473rem, 0.847vw, 0.682rem);
   }
 
+  /* Increased mobile safe area fallback to 4rem for better visibility */
+  .wtad-menu-top.panel-open {
+    transform: translate(-50%, calc(-50vh + env(safe-area-inset-top, 4rem)));
+  }
+
+  .wtad-menu-bottom.panel-open {
+    transform: translate(-50%, calc(50vh - 100% - env(safe-area-inset-bottom, 4rem)));
+  }
+
   .wtad-panel {
-    /* Updated mobile panel positioning to match new safe area offsets */
-    top: calc(env(safe-area-inset-top, 1.5rem) + 4rem);
-    bottom: calc(env(safe-area-inset-bottom, 1.5rem) + 4rem);
+    /* Updated mobile panel positioning to match new 4rem safe area offset */
+    top: calc(env(safe-area-inset-top, 4rem) + 4rem);
+    bottom: calc(env(safe-area-inset-bottom, 4rem) + 4rem);
     width: 85vw;
     border-radius: 2.07rem;
     z-index: 8;
