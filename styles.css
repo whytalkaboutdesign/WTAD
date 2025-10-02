@@ -45,10 +45,10 @@ body {
   transform: translate(-50%, -100%);
 }
 
-/* Using safe-area-inset-top to avoid browser UI on mobile */
+/* Keep top: 50% and only animate transform for smooth animation */
 .wtad-menu-top.panel-open {
-  top: env(safe-area-inset-top, 0.5rem);
-  transform: translate(-50%, 0);
+  top: 50%;
+  transform: translate(-50%, calc(-50vh + env(safe-area-inset-top, 0.5rem)));
 }
 
 .wtad-menu-bottom {
@@ -58,11 +58,10 @@ body {
   transform: translate(-50%, 0);
 }
 
-/* Using safe-area-inset-bottom to avoid navigation bar on mobile */
+/* Keep top: 50% and only animate transform for smooth animation */
 .wtad-menu-bottom.panel-open {
-  top: auto;
-  bottom: env(safe-area-inset-bottom, 0.5rem);
-  transform: translate(-50%, 0);
+  top: 50%;
+  transform: translate(-50%, calc(50vh - 100% - env(safe-area-inset-bottom, 0.5rem)));
 }
 
 /* Menu Buttons */
@@ -210,19 +209,6 @@ body {
   .wtad-menu-button {
     font-size: clamp(1.122rem, 4.07vw, 1.738rem);
     padding: clamp(0.165rem, 0.286vw, 0.286rem) clamp(0.473rem, 0.847vw, 0.682rem);
-  }
-
-  /* Mobile safe area insets for top menu */
-  .wtad-menu-top.panel-open {
-    top: env(safe-area-inset-top, 0.5rem);
-    transform: translate(-50%, 0);
-  }
-
-  /* Mobile safe area insets for bottom menu */
-  .wtad-menu-bottom.panel-open {
-    top: auto;
-    bottom: env(safe-area-inset-bottom, 0.5rem);
-    transform: translate(-50%, 0);
   }
 
   .wtad-panel {

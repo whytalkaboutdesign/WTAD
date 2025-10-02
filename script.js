@@ -134,7 +134,6 @@ const panelCoverVideoManifesto = document.getElementById("panelCoverVideoManifes
 // Functions
 function openPanel(type) {
   if (currentPanel === type) {
-    closePanel()
     return
   }
 
