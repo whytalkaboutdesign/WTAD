@@ -34,7 +34,8 @@ body {
   gap: 0;
   /* Added high z-index to ensure menus stay on top of other elements */
   z-index: 9999;
-  transition: transform 0.6s cubic-bezier(0.4, 0, 0.2, 1);
+  /* Changed to ease-in with acceleration curve for fluid motion */
+  transition: transform 0.6s cubic-bezier(0.42, 0, 1, 1);
 }
 
 /* Changed top menu to position: fixed for consistency with bottom menu */
@@ -117,7 +118,8 @@ body {
   border-radius: 8rem;
   opacity: 0;
   pointer-events: none;
-  transition: all 0.6s cubic-bezier(0.4, 0, 0.2, 1);
+  /* Changed to ease-in with acceleration curve for fluid motion */
+  transition: all 0.6s cubic-bezier(0.42, 0, 1, 1);
   overflow: hidden;
   display: flex;
   flex-direction: column;

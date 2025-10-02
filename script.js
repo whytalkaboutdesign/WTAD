@@ -133,7 +133,10 @@ const panelCoverVideoManifesto = document.getElementById("panelCoverVideoManifes
 
 // Functions
 function openPanel(type) {
+  console.log("[v0] openPanel called with type:", type, "currentPanel:", currentPanel)
+
   if (currentPanel === type) {
+    console.log("[v0] Same panel clicked, staying open")
     return
   }
 
@@ -173,6 +176,7 @@ function openPanel(type) {
 }
 
 function closePanel() {
+  console.log("[v0] closePanel called, currentPanel was:", currentPanel)
   currentPanel = null
   panel.classList.remove("active")
   topMenu.classList.remove("panel-open")
