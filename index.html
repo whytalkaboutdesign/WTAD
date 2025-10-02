@@ -7,17 +7,17 @@
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <div class="wtad-container"> 
-        <nav class="wtad-menu wtad-menu-top" id="topMenu">
-            <button class="wtad-menu-button wtad-fade-in" style="animation-delay: 0s" onclick="closePanel()">
-                WTAD
-            </button>
-            <button class="wtad-menu-button wtad-fade-in" style="animation-delay: 0.1s" onclick="openEmail()">
-                Whytalkaboutdesign?
-            </button>
-        </nav>
+    <!-- Moved menus outside container so position: fixed works relative to viewport -->
+    <nav class="wtad-menu wtad-menu-top" id="topMenu">
+        <button class="wtad-menu-button wtad-fade-in" style="animation-delay: 0s" onclick="closePanel()">
+            WTAD
+        </button>
+        <button class="wtad-menu-button wtad-fade-in" style="animation-delay: 0.1s" onclick="openEmail()">
+            Whytalkaboutdesign?
+        </button>
+    </nav>
 
-          
+    <div class="wtad-container"> 
         <div class="wtad-panel" id="panel">
             <div class="wtad-panel-cover">
                 
@@ -54,17 +54,17 @@
                 <div class="wtad-panel-text" id="panelText"></div>
             </div>
         </div>
-
-         
-        <nav class="wtad-menu wtad-menu-bottom" id="bottomMenu">
-            <button class="wtad-menu-button wtad-fade-in" style="animation-delay: 0.2s" onclick="openPanel('articles')">
-                Articles
-            </button>
-            <button class="wtad-menu-button wtad-fade-in" style="animation-delay: 0.3s" onclick="openPanel('about')">
-                Manifesto
-            </button>
-        </nav>
     </div>
+
+    <!-- Bottom menu also moved outside container -->
+    <nav class="wtad-menu wtad-menu-bottom" id="bottomMenu">
+        <button class="wtad-menu-button wtad-fade-in" style="animation-delay: 0.2s" onclick="openPanel('articles')">
+            Articles
+        </button>
+        <button class="wtad-menu-button wtad-fade-in" style="animation-delay: 0.3s" onclick="openPanel('about')">
+            Manifesto
+        </button>
+    </nav>
 
     <script src="script.js"></script>
 </body>
