@@ -41,13 +41,13 @@ body {
   position: fixed;
   top: 50%;
   left: 50%;
-  /* Made menus overlap by 2px when centered to eliminate white line gap */
   transform: translate(-50%, calc(-100% + 2px));
 }
 
+/* Anchored top menu to 2rem from top on desktop for safe positioning */
 .wtad-menu-top.panel-open {
   top: 50%;
-  transform: translate(-50%, calc(-50vh + env(safe-area-inset-top, 1.5rem)));
+  transform: translate(-50%, calc(-50vh + 2rem));
 }
 
 .wtad-menu-bottom {
@@ -57,9 +57,10 @@ body {
   transform: translate(-50%, 0);
 }
 
+/* Anchored bottom menu to 2rem from bottom on desktop for safe positioning */
 .wtad-menu-bottom.panel-open {
   top: 50%;
-  transform: translate(-50%, calc(50vh - 100% - env(safe-area-inset-bottom, 1.5rem)));
+  transform: translate(-50%, calc(50vh - 100% - 2rem));
 }
 
 /* Menu Buttons */
@@ -101,8 +102,9 @@ body {
 /* Panel Styles */
 .wtad-panel {
   position: absolute;
-  top: calc(env(safe-area-inset-top, 1.5rem) + 2.8rem);
-  bottom: calc(env(safe-area-inset-bottom, 1.5rem) + 2.8rem);
+  /* Updated panel positioning to match new menu anchoring (2rem + estimated menu height) */
+  top: calc(2rem + 2.8rem);
+  bottom: calc(2rem + 2.8rem);
   left: 50%;
   transform: translateX(-50%);
   width: 90vw;
@@ -205,19 +207,19 @@ body {
     padding: clamp(0.165rem, 0.286vw, 0.286rem) clamp(0.473rem, 0.847vw, 0.682rem);
   }
 
-  /* Increased mobile safe area fallback to 4rem for better visibility */
+  /* Anchored menus to 5rem from edges on mobile for safe positioning within viewport */
   .wtad-menu-top.panel-open {
-    transform: translate(-50%, calc(-50vh + env(safe-area-inset-top, 4rem)));
+    transform: translate(-50%, calc(-50vh + 5rem));
   }
 
   .wtad-menu-bottom.panel-open {
-    transform: translate(-50%, calc(50vh - 100% - env(safe-area-inset-bottom, 4rem)));
+    transform: translate(-50%, calc(50vh - 100% - 5rem));
   }
 
   .wtad-panel {
-    /* Updated mobile panel positioning to match new 4rem safe area offset */
-    top: calc(env(safe-area-inset-top, 4rem) + 4rem);
-    bottom: calc(env(safe-area-inset-bottom, 4rem) + 4rem);
+    /* Updated mobile panel positioning to match new 5rem menu anchoring */
+    top: calc(5rem + 4rem);
+    bottom: calc(5rem + 4rem);
     width: 85vw;
     border-radius: 2.07rem;
     z-index: 8;
