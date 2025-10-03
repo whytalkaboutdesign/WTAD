@@ -44,10 +44,10 @@ body {
   transform: translate(-50%, calc(-100% + 2px));
 }
 
-/* Anchored top menu to 2rem from top on desktop for safe positioning */
+/* Reduced distance to 0.25rem (≈1mm) on desktop */
 .wtad-menu-top.panel-open {
   top: 50%;
-  transform: translate(-50%, calc(-50vh + 2rem));
+  transform: translate(-50%, calc(-50vh + 0.25rem));
 }
 
 .wtad-menu-bottom {
@@ -57,10 +57,10 @@ body {
   transform: translate(-50%, 0);
 }
 
-/* Anchored bottom menu to 2rem from bottom on desktop for safe positioning */
+/* Reduced distance to 0.25rem (≈1mm) on desktop */
 .wtad-menu-bottom.panel-open {
   top: 50%;
-  transform: translate(-50%, calc(50vh - 100% - 2rem));
+  transform: translate(-50%, calc(50vh - 100% - 0.25rem));
 }
 
 /* Menu Buttons */
@@ -102,9 +102,9 @@ body {
 /* Panel Styles */
 .wtad-panel {
   position: absolute;
-  /* Updated panel positioning to match new menu anchoring (2rem + estimated menu height) */
-  top: calc(2rem + 2.8rem);
-  bottom: calc(2rem + 2.8rem);
+  /* Updated panel positioning to match new 0.25rem menu distance */
+  top: calc(0.25rem + 2.8rem);
+  bottom: calc(0.25rem + 2.8rem);
   left: 50%;
   transform: translateX(-50%);
   width: 90vw;
@@ -207,19 +207,19 @@ body {
     padding: clamp(0.165rem, 0.286vw, 0.286rem) clamp(0.473rem, 0.847vw, 0.682rem);
   }
 
-  /* Anchored menus to 5rem from edges on mobile for safe positioning within viewport */
+  /* Reduced distance to 0.5rem (≈2mm) on mobile */
   .wtad-menu-top.panel-open {
-    transform: translate(-50%, calc(-50vh + 5rem));
+    transform: translate(-50%, calc(-50vh + 0.5rem));
   }
 
   .wtad-menu-bottom.panel-open {
-    transform: translate(-50%, calc(50vh - 100% - 5rem));
+    transform: translate(-50%, calc(50vh - 100% - 0.5rem));
   }
 
   .wtad-panel {
-    /* Updated mobile panel positioning to match new 5rem menu anchoring */
-    top: calc(5rem + 4rem);
-    bottom: calc(5rem + 4rem);
+    /* Updated mobile panel positioning to match new 0.5rem menu distance */
+    top: calc(0.5rem + 4rem);
+    bottom: calc(0.5rem + 4rem);
     width: 85vw;
     border-radius: 2.07rem;
     z-index: 8;
