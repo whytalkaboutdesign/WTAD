@@ -136,7 +136,8 @@ function openPanel(type) {
   console.log("[v0] openPanel called with type:", type, "currentPanel:", currentPanel)
 
   if (currentPanel === type) {
-    console.log("[v0] Same panel clicked, staying open")
+    console.log("[v0] Same panel clicked, closing panel")
+    closePanel()
     return
   }
 
