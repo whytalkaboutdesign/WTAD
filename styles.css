@@ -46,7 +46,8 @@ body {
 
 .wtad-menu-top.panel-open {
   top: 50%;
-  transform: translate(-50%, calc(-50vh + 0.25rem));
+  /* Increased safe distance to keep menu visible on desktop */
+  transform: translate(-50%, calc(-50vh + 1rem));
 }
 
 .wtad-menu-bottom {
@@ -58,7 +59,8 @@ body {
 
 .wtad-menu-bottom.panel-open {
   top: 50%;
-  transform: translate(-50%, calc(50vh - 100% - 0.25rem));
+  /* Increased safe distance to keep menu visible on desktop */
+  transform: translate(-50%, calc(50vh - 100% - 1rem));
 }
 
 /* Menu Buttons */
@@ -206,16 +208,19 @@ body {
   }
 
   .wtad-menu-top.panel-open {
-    transform: translate(-50%, calc(-50vh + 0.5rem));
+    /* Increased mobile safe distance to account for browser UI */
+    transform: translate(-50%, calc(-50vh + 3.5rem));
   }
 
   .wtad-menu-bottom.panel-open {
-    transform: translate(-50%, calc(50vh - 100% - 0.5rem));
+    /* Increased mobile safe distance to account for browser UI */
+    transform: translate(-50%, calc(50vh - 100% - 3.5rem));
   }
 
   .wtad-panel {
-    top: calc(0.5rem + 4rem);
-    bottom: calc(0.5rem + 4rem);
+    /* Updated panel positioning to match new menu distances */
+    top: calc(3.5rem + 4rem);
+    bottom: calc(3.5rem + 4rem);
     /* Tightened mobile width and increased border-radius by 20% */
     width: 80vw;
     border-radius: 2.5rem;
